@@ -1,7 +1,7 @@
 <?
 header("Content-type: text/html; charset=utf-8");
 sendSMS();
-function sendSMS2(){
+function sendSMS(){
     $login="Marina1234562016";
     $password="marina2015";
     $telephone=$_GET["telephone"];
