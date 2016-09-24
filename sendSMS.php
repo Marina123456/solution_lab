@@ -1,7 +1,7 @@
 <?
 header("Content-type: text/html; charset=utf-8");
 sendSMS();
-function sendSMS1(){
+function sendSMS2(){
     $login="Marina1234562016";
     $password="marina2015";
     $telephone=$_GET["telephone"];
@@ -11,7 +11,7 @@ function sendSMS1(){
     $status=file_get_contents('http://web2.smsgorod.ru/sendsms.php?user='.$login.'&pwd='.$password.'&sadr='.$sadr.'&text='.$text.'&dadr='.$telephone);
     echo $status;//file_get_contents('http://web2.smsgorod.ru/sendsms.php?user='.$login.'&pwd='.$password.'&smsid='.$status);
 }
-function sendSMS(){
+function sendSMS1(){
     $login="z1474702982409";
     $password='334906';
     $telephone='%2B'.$_GET["telephone"];

@@ -26,7 +26,7 @@ function getRate(){
     </select><br>
     <label id="rate_label"></label><br>
     <label>Введите номер телефона</label>
-    <input name="telephone" id="telephoneNumber" type="tel" value="+79052523998"><br>
+    <input name="telephone" id="telephoneNumber" type="tel" value="79052523998"><br>
     <input type="submit" value="Отправить смс">
 
 </form>
