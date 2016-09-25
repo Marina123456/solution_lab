@@ -21,8 +21,8 @@ function deleteSimbols($telephone){
  * функция для работы с внешним сервисом http://smsgorod.ru/
  */
 function sendSMS(){
-    $login="Marina1234562016";
-    $password="marina2015";
+    $login="SolutionLabPorshen";
+    $password="SolutionLabPorshen";
     $telephone=$_GET["telephone"];
     $telephone=deleteSimbols($telephone);
 
