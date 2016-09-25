@@ -26,7 +26,7 @@ function getRate(){
 <div class="all_info">
 <form method="POST"  action="javascript:sendSMS();" class="mainform">
     <h1>Отправка смс с курсом валют</h1>
-    <label>Выберите отсылаемый курс валют</label><br>
+    <label>Выберите валюту </label><br>
     <select name="rate" id="rate" onchange="showRate()">
         <?$r1=getRate();
         foreach ($r1 as $item):?>
