@@ -86,6 +86,7 @@ function getRate(){
         var str_par =$('form').serialize();
         str_par=str_par+'&namerate='+$("#rate :selected").text();
         console.log('sendSMS.php?'+str_par);
+        $('.all_info').text('Ожидание ответа от сервера...');
         $.ajax({
             url: 'sendSMS.php?'+str_par,
             type: 'GET',
