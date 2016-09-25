@@ -18,18 +18,21 @@ function deleteSimbols($telephone){
     return $telephone;
 }
 /**
- * функция для работы с внешним сервисом http://smsgorod.ru/
+ * функция для работы с внешним сервисом
  */
 function sendSMS(){
-    $login="SolutionLabPorshen";
-    $password="SolutionLabPorshen";
-    $telephone=$_GET["telephone"];
-    $telephone=deleteSimbols($telephone);
+    $login="z1474813326220";
+    $password='308892';
 
-    $sadr="VIRTA";
-    $text="Текущий курс ".$_GET["namerate"]." ".$_GET["rate"]." p";//
-    $text=str_replace(" ","%20",$text);
-    $status=file_get_contents('http://web2.smsgorod.ru/sendsms.php?user='.$login.'&pwd='.$password.'&sadr='.$sadr.'&text='.$text.'&dadr='.$telephone);
-    echo $status;
+    $telephone=deleteSimbols($_GET["telephone"]);
+    $telephone='%2B'.$telephone;
+
+    $text="Rate ".$_GET["namerate"]." - ".$_GET["rate"]." RUB";
+    $convertedText = mb_convert_encoding($text, 'utf-8', mb_detect_encoding($text));
+
+    $send_url='https://api.iqsms.ru/messages/v2/send/?login='.$login.'&password='.$password.'&phone='.$telephone.'&text='.$convertedText;
+
+    $send=file_get_contents($send_url);
+    echo $send."<br>";
 }
 ?>
