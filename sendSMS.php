@@ -20,7 +20,7 @@ function deleteSimbols($telephone){
 /**
  * функция для работы с внешним сервисом http://iqsms.ru/
  */
-function sendSMS1(){
+function sendSMS(){
     $login="z1474702982409";
     $password='334906';
     $telephone='%2B'.$_GET["telephone"];
