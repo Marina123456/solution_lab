@@ -28,7 +28,7 @@ function sendSMS(){
 
     $sadr="VIRTA";
     $text="Текущий курс ".$_GET["namerate"]." ".$_GET["rate"]." p";//
-
+    $text=str_replace(" ","%20",$text);
     $status=file_get_contents('http://web2.smsgorod.ru/sendsms.php?user='.$login.'&pwd='.$password.'&sadr='.$sadr.'&text='.$text.'&dadr='.$telephone);
     echo $status;
 }
