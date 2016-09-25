@@ -97,6 +97,7 @@ function getRate(){
             },
             error:function(data){
                 console.log(data);
+                $('.all_info').text('Ошибка :( Попробуйте в следущий раз');
             }
         });
     }
