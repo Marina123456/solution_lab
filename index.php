@@ -91,8 +91,7 @@ function getRate(){
             type: 'GET',
             crossDomain: true,
             success: function (data) {
-                console.log(data);
-                alert('СМС отправлено.');
+                $('.all_info').text('СМС отправлен!');
             },
             error:function(data){
                 console.log(data);
