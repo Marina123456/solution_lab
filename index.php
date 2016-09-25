@@ -77,7 +77,7 @@ function getRate(){
         $("#rate_label").text("Курс равен: "+$("#rate :selected").val()+' p.');
     }
     showRate();
-    
+
     function sendSMS() {
         if ((document.getElementById('telephoneNumberValidationMessage').innerHTML!='') || ($("#telephoneNumber").val()=='') ){
             alert('Не введен телефон!');
