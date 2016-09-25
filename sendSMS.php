@@ -27,7 +27,7 @@ function sendSMS(){
     $telephone=deleteSimbols($_GET["telephone"]);
     $telephone='%2B'.$telephone;
 
-    $text="Rate ".$_GET["namerate"]." - ".$_GET["rate"]." RUB";
+    $text="CURRENT ".$_GET["namerate"]." RATE IS ".$_GET["rate"]." RUB";
 
     $send_url='http://api.iqsms.ru/messages/v2/send/?login='.$login.'&password='.$password.'&phone='.$telephone.'&text='.$text;
 
